@@ -3,20 +3,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import eventPic from "../assets/event.webp";
 import "../styles/create.css";
+import Event from './Event';
 
-const Create = () => {
-  const [event, setEvent] = useState({
-    name: "",
-    hostName: "",
-    start: null,
-    end: null,
-    location: "",
-    photo: null,
-  });
-
-  const handleChange = (e) => {
-    setEvent((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+const Create = ({ event, handleChange, handleFileUpload }) => {
   console.log(event);
   return (
     <div className="createPage">
@@ -35,10 +24,20 @@ const Create = () => {
           />
 
           <label htmlFor="start">- Event start date : </label>
-          <input type="date" name="start" id="start" onChange={handleChange} />
+          <input
+            type="datetime-local"
+            name="start"
+            id="start"
+            onChange={handleChange}
+          />
 
           <label htmlFor="end">- Event end date : </label>
-          <input type="date" name="end" id="end" onChange={handleChange} />
+          <input
+            type="datetime-local"
+            name="end"
+            id="end"
+            onChange={handleChange}
+          />
 
           <label htmlFor="location">- Event location :</label>
           <input
@@ -54,7 +53,7 @@ const Create = () => {
               type="file"
               name="photo"
               id="photo"
-              onChange={handleChange}
+              onChange={handleFileUpload}
             />
           </label>
         </form>
@@ -63,6 +62,7 @@ const Create = () => {
         <Link to="/event">🎉 Add your event</Link>
         <img src={eventPic} alt="event img" />
       </div>
+      <Event />
     </div>
   );
 };
