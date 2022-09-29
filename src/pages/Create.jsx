@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import eventPic from "../assets/event.webp";
 import "../styles/create.css";
-import Event from './Event';
+import Event from "./Event";
 
 const Create = ({ event, handleChange, handleFileUpload }) => {
   console.log(event);
@@ -62,7 +62,6 @@ const Create = ({ event, handleChange, handleFileUpload }) => {
         <Link to="/event">🎉 Add your event</Link>
         <img src={eventPic} alt="event img" />
       </div>
-      <Event />
     </div>
   );
 };

@@ -1,24 +1,23 @@
 import Homepage from "./pages/Homepage";
 import "./app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Create from './pages/Create';
-import Event from './pages/Event';
-import { useState } from 'react';
-
+import Create from "./pages/Create";
+import Event from "./pages/Event";
+import { useState } from "react";
 
 function App() {
   const [event, setEvent] = useState({
-    name: "Abdellah",
-    hostName: "hostName",
-    start: "2022-09-29T13:23",
-    end: "2022-09-29T13:23",
-    location: "Algeria",
+    name: "",
+    hostName: "",
+    start: "",
+    end: "",
+    location: "",
   });
-  const [photo, setPhoto] = useState()
+  const [photo, setPhoto] = useState();
 
   const handleFileUpload = (e) => {
     setPhoto(URL.createObjectURL(e.target.files[0]));
-  }
+  };
 
   const handleChange = (e) => {
     setEvent((prev) => ({ ...prev, [e.target.name]: e.target.value }));

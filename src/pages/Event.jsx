@@ -9,7 +9,6 @@ const Event = ({ event, photo }) => {
   return (
     <div className="eventPage">
       <div className="wrapper">
-        {" "}
         {event && (
           <div className="event">
             <img src={photo} alt={`${event.name} img`} />
