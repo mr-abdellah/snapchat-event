@@ -1,6 +1,7 @@
 import Homepage from "./pages/Homepage";
 import "./app.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Create from './pages/Create';
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/create",
-    element: <div> create page</div>,
+    element: <Create />,
   },
   {
     path: "/event",
