@@ -1,0 +1,116 @@
+.createPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.createPageInfo h2 {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 64px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input {
+  border: none;
+  border-bottom: 1px solid #8456ec;
+}
+
+form input[type="date"] {
+  background-color: #b297f0;
+  color: #fff;
+  border: none;
+}
+
+form input[type="date"]:focus-visible {
+  outline: none;
+}
+
+form input:not(input[type="date"]):focus-visible {
+  border: 1px solid #8456ec;
+  outline: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+#photoUploadBtn {
+  background-color: #b297f0;
+  width: 90%;
+  padding: 1% 3%;
+  color: #fff;
+  cursor: pointer;
+}
+
+.createPage a {
+  text-decoration: none;
+  background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+  border-radius: 10px;
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: #ffffff;
+  padding: 2% 5%;
+  margin-top: 4%;
+}
+
+.createBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.createBtn img {
+  width: 40%;
+}
+
+.createBtn a {
+  order: 2;
+}
+
+@media screen and (min-width: 1024px) {
+  .createPage {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .createPageInfo {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .createBtn {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .createBtn img {
+    width: 70%;
+  }
+
+  .createBtn a {
+    padding: 4% 12%;
+  }
+
+  #photoUploadBtn {
+    width: 35%;
+  }
+}
