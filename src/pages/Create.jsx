@@ -1,9 +1,7 @@
 import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import eventPic from "../assets/event.webp";
 import "../styles/create.css";
-import Event from "./Event";
 
 const Create = ({ event, handleChange, handleFileUpload }) => {
   console.log(event);
